@@ -1,9 +1,28 @@
 body {
-    text-align: center;
+    margin:auto;
     background-color: red;
+    width: 100%;
+    text-align: center;
 }
 
 .phase {
-    border: solid black 5px;
-    border-radius: 10%;
+    border: solid black 3px;
+    width: 10%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.work {
+    width: 45%;
+    float: left;
+    display: inline;
+    border: solid gray 2px;
+}
+
+.break {
+    width: 45%;
+    float: right;
+    display: inline;
+    border: solid gray 2px;
 }

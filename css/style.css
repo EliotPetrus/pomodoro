@@ -5,6 +5,10 @@ body {
     text-align: center;
 }
 
+#title {
+    color: black;
+}
+
 .phase {
     border: solid black 3px;
     width: 10%;
@@ -13,14 +17,14 @@ body {
     overflow: hidden;
 }
 
-.work {
+#work {
     width: 45%;
     float: left;
     display: inline;
     border: solid gray 2px;
 }
 
-.break {
+#break {
     width: 45%;
     float: right;
     display: inline;

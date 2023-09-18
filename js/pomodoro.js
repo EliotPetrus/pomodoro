@@ -1,15 +1,23 @@
 let timer = false
+let work = false
+let cmpt = 1
 
-const departMinutes = 10
-let temps = departMinutes * 60
+const tempsWork = 10
+const tempsBreak = 5
+let temps = tempsWork * 60
 
 const timerElement = document.getElementById("timer")
-timerElement.innerText = departMinutes < 10 ? `0${departMinutes}:00` : `${departMinutes}:00`
+const startElement = document.getElementById("start")
+const stateElement = document.getElementById("state")
+
+timerElement.innerText = tempsWork < 10 ? `0${tempsWork}:00` : `${tempsWork}:00`
 
 document.getElementById('start').addEventListener('click', () => {
 
     if (timer == false) {
         timer = true
+        work = true
+        startElement.innerText='stop';
         setInterval(() => {
             let minutes = parseInt(temps / 60, 10)
             let secondes = parseInt(temps % 60, 10)
@@ -19,7 +27,27 @@ document.getElementById('start').addEventListener('click', () => {
 
             timerElement.innerText = `${minutes}:${secondes}`
             temps = temps <= 0 ? 0 : temps - 1
-        }, 100)
+
+            if (work == true && temps == 0){
+                work = false
+                if (cmpt%4 == 0){
+                    temps = tempsBreak*4*60
+                stateElement.innerText='LONG BREAK'
+                }else {
+                    temps = tempsBreak*60
+                    stateElement.innerText='BREAK'
+                }
+                stateElement.style.backgroundColor='green'
+            } 
+            else if (work == false && temps == 0) {
+                cmpt += 1
+                work = true
+                temps = tempsWork*60
+                stateElement.innerText='WORK'
+                stateElement.style.backgroundColor='red'
+            }
+
+        }, 1)
     }
 
     else if (timer == true) {

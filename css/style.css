@@ -1,6 +1,6 @@
 body {
     margin:auto;
-    background-color: red;
+    background-color: grey;
     width: 100%;
     text-align: center;
 }
@@ -9,24 +9,11 @@ body {
     color: black;
 }
 
-.phase {
-    border: solid black 3px;
-    width: 10%;
+#state {
+    border: solid black 5px;
+    width: 5%;
+    background-color: red;
     margin: auto;
     text-align: center;
     overflow: hidden;
-}
-
-#work {
-    width: 45%;
-    float: left;
-    display: inline;
-    border: solid gray 2px;
-}
-
-#break {
-    width: 45%;
-    float: right;
-    display: inline;
-    border: solid gray 2px;
 }

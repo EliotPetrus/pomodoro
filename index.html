@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+    </style>
 </head>
 
 <body>
@@ -16,12 +19,32 @@
             <p id="state">WORK</p>
         </div>
 
-        <div id="timer">00:00</div>
+        <div id="timer">10:00</div>
 
         <div class="start">
             <button id="start">start</button>
         </div>
-    </main >
+
+        <form method="dialog">
+            <p>
+                <label>Temps de travail :</label>
+                <input type="range" id="timeWorkForm" min="1" step="1" max="60" value="10">
+                <span id="textWork"></span>
+            </p>
+            <p>
+                <label>Temps de pause : </label>
+                <input type="range" id="timeBreakForm" min="1" step="1" max="60" value="5">
+                <span id="textBreak"></span>
+            </p>
+            <p>
+                <label>Temps de la longue pause : </label>
+                <input type="range" id="timeLongBreakForm" min="1" step="1" max="60" value="20">
+                <span id="textLongBreak"></span>
+            </p>
+        </form>
+
+    </main>
     <script src="./js/pomodoro.js"></script>
 </body>
+
 </html>

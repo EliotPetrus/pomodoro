@@ -131,7 +131,7 @@ function start() {
             startBreak()
         }
 
-    }, 1);
+    }, 1000);
 }
 
 /**

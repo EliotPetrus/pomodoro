@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+    </style>
     <script src="https://kit.fontawesome.com/7b14f0df53.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,7 +26,7 @@
             <button id="start"></i></button>
         </div>
 
-        <form method="dialog">
+        <form class="txt" method="dialog">
             <p>
                 <label>Temps de travail :</label>
                 <input type="range" id="timeWorkForm" min="1" step="1" max="60" value="10">
@@ -42,7 +44,7 @@
             </p>
         </form>
 
-        <p>CYCLES : <span id="cycle">0</span></p>
+        <p class="txt">CYCLE : <span id="cycle">0</span></p>
 
     </main>
     <script src="./js/pomodoro.js"></script>

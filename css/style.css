@@ -1,6 +1,6 @@
 body {
     margin:auto;
-    background-color: rgb(25, 151, 255);
+    background-color: rgb(168, 25, 75);
     width: 100%;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -11,36 +11,44 @@ body {
 }
 
 #state {
-    border: solid black 3px;
+    border: solid black 4px;
     border-radius: 30px;
     width: 65px;
     background-color: red;
     margin: auto;
     padding: 7px;
     text-align: center;
+    font-size: 17px;
 }
 
 #timer {
-    border: solid black 3px;
+    border: solid black 5px;
     border-radius: 100px;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(145, 145, 145);
+    width: 200px;
+    height: 200px;
+    background-color: #FD2611;
     margin: auto;
     align-items: center;
     display: flex;
     justify-content: center;
+    font-size: 50px;
 }
 
 .phase {
-    padding: 2%;
+    padding: 1%;
 }
 
 .start {
-    padding: 2%;
+    padding: 1%;
 }
 
 #start {
-    background-color: rgb(25, 151, 255);
+    background-color: rgb(168, 25, 75);
     border: 0px;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+}
+
+.txt {
+    font-size: 25px;
 }

@@ -56,8 +56,10 @@ textLongBreak.innerText = timeLongBreakForm.value;
 
 timeWorkForm.addEventListener('change', () => {
     textWork.innerText = timeWorkForm.value;
-    timerElement.innerText = timeWorkForm.value < 10 ? `0${timeWorkForm.value}:00` : `${timeWorkForm.value}:00`;
     localStorage.setItem("travail", timeWorkForm.value);
+    if (timer === false){
+        timerElement.innerText = timeWorkForm.value < 10 ? `0${timeWorkForm.value}:00` : `${timeWorkForm.value}:00`;
+    }
 });
 timeBreakForm.addEventListener('change', () => {
     textBreak.innerText = timeBreakForm.value;
@@ -94,12 +96,13 @@ document.getElementById('start').addEventListener('click', () => {
                 work = false
                 if (cmpt % 4 == 0) {
                     temps = timeLongBreak * 60;
-                    stateElement.innerText = 'LONG BREAK';
+                    stateElement.innerText = 'BREAK';
                 } else {
                     temps = timeBreak * 60;
                     stateElement.innerText = 'BREAK';
                 };
                 stateElement.style.backgroundColor = 'green';
+                timerElement.style.backgroundColor = 'green';
             }
             else if (work == false && temps == 0) {
                 cmpt += 1;
@@ -107,10 +110,11 @@ document.getElementById('start').addEventListener('click', () => {
                 temps = timeWork * 60;
                 stateElement.innerText = 'WORK';
                 stateElement.style.backgroundColor = 'red';
+                timerElement.style.backgroundColor = 'red';
                 cycle.innerText=cmpt;
             }
 
-        }, 1);
+        }, 10);
     }
 
     else if (timer == true) {

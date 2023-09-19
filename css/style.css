@@ -1,6 +1,6 @@
 body {
     margin:auto;
-    background-color: grey;
+    background-color: rgb(25, 151, 255);
     width: 100%;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -11,10 +11,36 @@ body {
 }
 
 #state {
-    border: solid black 5px;
-    width: 5%;
+    border: solid black 3px;
+    border-radius: 30px;
+    width: 65px;
     background-color: red;
     margin: auto;
+    padding: 7px;
     text-align: center;
-    overflow: hidden;
+}
+
+#timer {
+    border: solid black 3px;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(145, 145, 145);
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.phase {
+    padding: 2%;
+}
+
+.start {
+    padding: 2%;
+}
+
+#start {
+    background-color: rgb(25, 151, 255);
+    border: 0px;
 }

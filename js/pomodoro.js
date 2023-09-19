@@ -17,6 +17,8 @@ const textLongBreak = document.getElementById('textLongBreak');
 const cycle = document.getElementById('cycle');
 cycle.innerText=cmpt;
 
+startElement.innerHTML = '<i class="fa-solid fa-play"></i>';
+
 let timeWork;
 let timeBreak;
 let timeLongBreak;
@@ -32,6 +34,7 @@ if (localStorage.getItem("pause") != null) {
     timeBreak = localStorage.getItem("pause");
     textBreak.innerText = timeBreak;
     timeBreakForm.value = timeBreak;
+
 } else {
     timeBreak = 5;
 }
@@ -39,6 +42,7 @@ if (localStorage.getItem("longBreak") != null) {
     timeLongBreak = localStorage.getItem("longBreak");
     textLongBreak.innerText = timeLongBreak;
     timeLongBreakForm.value = timeLongBreak;
+
 } else {
     timeLongBreak = 20;
 }
@@ -53,12 +57,15 @@ textLongBreak.innerText = timeLongBreakForm.value;
 timeWorkForm.addEventListener('change', () => {
     textWork.innerText = timeWorkForm.value;
     timerElement.innerText = timeWorkForm.value < 10 ? `0${timeWorkForm.value}:00` : `${timeWorkForm.value}:00`;
+    localStorage.setItem("travail", timeWorkForm.value);
 });
 timeBreakForm.addEventListener('change', () => {
     textBreak.innerText = timeBreakForm.value;
+    localStorage.setItem("pause", timeBreakForm.value);
 });
 timeLongBreakForm.addEventListener('change', () => {
     textLongBreak.innerText = timeLongBreakForm.value;
+    localStorage.setItem("longBreak", timeLongBreakForm.value);
 });
 
 document.getElementById('start').addEventListener('click', () => {
@@ -72,7 +79,7 @@ document.getElementById('start').addEventListener('click', () => {
         timer = true;
         work = true;
 
-        startElement.innerText = 'stop';
+        startElement.innerHTML = '<i class="fa-solid fa-rotate-right"></i>';
         setInterval(() => {
             let minutes = parseInt(temps / 60, 10);
             let secondes = parseInt(temps % 60, 10);
@@ -107,9 +114,6 @@ document.getElementById('start').addEventListener('click', () => {
     }
 
     else if (timer == true) {
-        localStorage.setItem("travail", timeWorkForm.value);
-        localStorage.setItem("pause", timeBreakForm.value);
-        localStorage.setItem("longBreak", timeLongBreakForm.value);
         location.reload();
     }
 

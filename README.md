@@ -7,6 +7,6 @@ Qu'es ce que [pomodoro](https://www.methode-pomodoro.fr/) ?
 - Un compte à rebour indiquant le temps restant à une phase.
 - Posibilité de personnaliser la durée des phases de travail et de repo.s
 ## 🛠️ Comment ça marche
-- Rendez-vous sur [mon pomodoro](https://github.com/EliotPetrus/pomodoro)
+- Rendez-vous sur [mon pomodoro](https://github.com/EliotPetrus/pomodoro/deployments/github-pages)
 - Le bouton central permet de lancer le timer ou de le reinitialiser.
 - Les champs restant permettent de modifier le durée de chaques phases.
